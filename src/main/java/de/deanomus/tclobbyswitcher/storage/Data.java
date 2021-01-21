@@ -1,4 +1,9 @@
 package de.deanomus.tclobbyswitcher.storage;
 
-public class Data implements Constants {
+
+/**
+ * Data class, which contains in future
+ * constants and methods for database or something
+ */
+public class Data {
 }
