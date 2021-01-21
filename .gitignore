@@ -1,4 +1,8 @@
+# idea / intellji folder
 .idea
+
+# maven target folder
+target/
 
 # Compiled class file
 *.class
