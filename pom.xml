@@ -8,7 +8,9 @@
     <artifactId>TCLobbySwitcher</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
+    <build>
+        <finalName>TCLobbySwitcher</finalName>
+    </build>  
 
     <repositories>
         <!-- This adds the Spigot Maven repository to the build -->
