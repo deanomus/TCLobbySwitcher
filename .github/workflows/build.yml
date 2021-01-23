@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ main ]
 
+env:
+  path:  target/TCLobbySwitcher.jar
+  build:  build-${{ github.run_number }}
+
 jobs:
   build:
 
@@ -25,3 +29,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     
+    - name: Create Release
+    - id: create_release
+    - uses: actions/create-release@v1.1.4
+    - with:
+        tag_name: ${{ env.build }}
+        release_name: Release ${{ env.build }}  
