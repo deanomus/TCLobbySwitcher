@@ -11,6 +11,7 @@ on:
 
 env:
   path:  target/TCLobbySwitcher.jar
+  name:  TCLobbySwitcher.jar  
   build:  build-${{ github.run_number }}
 
 jobs:
@@ -37,3 +38,13 @@ jobs:
       with:
         tag_name: ${{ env.build }}
         release_name: Release ${{ env.build }}  
+        
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1.0.2
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ${{ env.path }}
+        asset_name: ${{ env.name }}
+        asset_content_type: application/java-archive         
