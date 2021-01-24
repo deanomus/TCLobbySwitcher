@@ -1,5 +1,10 @@
 # TCLobbySwitcher
 
-//TODO
+//IN PROGRESS
 
-https://www.spigotmc.org/resources/timocloud-addon-lobbyswitcher.49297/
+ ## Building from source
+ ```
+ git clone https://github.com/deanomus/TCLobbySwitcher
+ cd TCLobbySwitcher
+ mvn clean package
+ ```
