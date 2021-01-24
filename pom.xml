@@ -6,7 +6,7 @@
 
     <groupId>de.deanomus</groupId>
     <artifactId>TCLobbySwitcher</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>3.0</version>
 
     <build>
         <finalName>TCLobbySwitcher</finalName>
