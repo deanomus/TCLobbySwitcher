@@ -49,10 +49,7 @@ jobs:
         asset_name: ${{ env.name }}
         asset_content_type: application/java-archive         
     - name: SFTP uploader
-      uses: wangyucode/sftp-upload-action@v1.1
+      uses: Atyn/simple-sftp-action@0.0.2
       with:
-        host: ${{ secrets.SFTP_HOST }}
-        username: ${{ secrets.SFTP_USER_NAME }}
-        password: ${{ secrets.SFTP_USER_PW }}
-        localDir: target/
-        remoteDir: ~/
+        url: sftp://${{ secrets.SFTP_USER_NAME }}:${{ secrets.SFTP_USER_PW }}@${{ secrets.SFTP_HOST }}
+        dir: target/
