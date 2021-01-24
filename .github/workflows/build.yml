@@ -48,3 +48,11 @@ jobs:
         asset_path: ${{ env.path }}
         asset_name: ${{ env.name }}
         asset_content_type: application/java-archive         
+    - name: SFTP uploader
+      uses: wangyucode/sftp-upload-action@v1.1
+      with:
+        host: ${{ secrets.SFTP_HOST }}
+        username: ${{ secrets.SFTP_USER_NAME }}
+        password: ${{ secrets.SFTP_USER_PW }}
+        localDir: ${{ env.path }}
+        remoteDir: ~/
