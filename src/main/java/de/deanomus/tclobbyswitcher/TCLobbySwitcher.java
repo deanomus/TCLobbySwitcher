@@ -23,7 +23,7 @@ public class TCLobbySwitcher extends JavaPlugin {
     public void onEnable() {
         Logger log = Bukkit.getLogger();
 
-        log.info("$aIt's starting o.O");
+        log.info("§aIt's starting o.O");
     }
 
 
