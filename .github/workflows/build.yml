@@ -48,3 +48,8 @@ jobs:
         asset_path: ${{ env.path }}
         asset_name: ${{ env.name }}
         asset_content_type: application/java-archive         
+    - name: SFTP uploader
+      uses: Atyn/simple-sftp-action@0.0.2
+      with:
+        url: sftp://${{ secrets.SFTP_USER_NAME }}:${{ secrets.SFTP_USER_PW }}@${{ secrets.SFTP_HOST }}
+        dir: target/
