@@ -6,10 +6,20 @@
 
     <groupId>de.deanomus</groupId>
     <artifactId>TCLobbySwitcher</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>3.0</version>
 
     <build>
         <finalName>TCLobbySwitcher</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>  
 
     <repositories>
