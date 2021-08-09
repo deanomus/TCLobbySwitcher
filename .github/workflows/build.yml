@@ -55,5 +55,5 @@ jobs:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
         disable_web_page_preview: true
-        message: ${{ env.name }} ${{ env.build }} successful finished. Released at ${{ steps.create_release.outputs.html_url }}
+        message: ${{ secrets.BOLD_CODE }}TCLobbySwitcher${{ secrets.BOLD_CODE }}\n\n${{ env.name }} ${{ env.build }} successfully finished.\nReleased at ${{ steps.create_release.outputs.html_url }}
         
