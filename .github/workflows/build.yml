@@ -48,3 +48,12 @@ jobs:
         asset_path: ${{ env.path }}
         asset_name: ${{ env.name }}
         asset_content_type: application/java-archive         
+        
+    - name: Send telegram notification
+      uses: appleboy/telegram-action@master
+      with:
+        to: ${{ secrets.TELEGRAM_TO }}
+        token: ${{ secrets.TELEGRAM_TOKEN }}
+        disable_web_page_preview: true
+        message: ${{ env.name }} ${{ env.build }} successful finished. Released at ${{ steps.create_release.outputs.html_url }}
+        
