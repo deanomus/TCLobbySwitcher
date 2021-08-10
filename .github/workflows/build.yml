@@ -12,7 +12,7 @@ on:
 env:
   path:  target/TCLobbySwitcher.jar
   name:  TCLobbySwitcher.jar  
-  build:  build-${{ github.run_number }}
+  build:  Build-${{ github.run_number }}
 
 jobs:
   build:
